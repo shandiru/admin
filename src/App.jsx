@@ -24,7 +24,7 @@ const SilentRefresh = ({ children }) => {
       // Try to get a new access token using httpOnly cookie
       axios
         .post(
-          `${ 'https://backend-nu-ruddy-13.vercel.app/api'}/auth/refresh`,
+          `${import.meta.env.VITE_API_URL || 'https://backend-nu-ruddy-13.vercel.app/api'}/auth/refresh`,
           {},
           { withCredentials: true }
         )
