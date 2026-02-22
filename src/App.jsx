@@ -11,7 +11,7 @@ import AdminDashboard from './pages/dashboard/AdminDashboard';
 import CustomerDashboard from './pages/dashboard/CustomerDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import ForgotPasswordPage from './pages/Forgotpasswordpage';
-import ResetPasswordPage from './pages/ResetPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPages';
 // On app load, try to silently refresh the access token using the httpOnly cookie.
 // This handles the case where user refreshes the page (Redux state is wiped, but cookie survives).
 const SilentRefresh = ({ children }) => {
