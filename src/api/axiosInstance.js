@@ -3,7 +3,7 @@ import store from '../store/store';
 import { refreshSuccess, logout } from '../store/slices/authSlice';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://backend-nu-ruddy-13.vercel.app/api',
   withCredentials: true, // important for httpOnly refresh cookie
 });
 
@@ -58,7 +58,7 @@ axiosInstance.interceptors.response.use(
       try {
         // Call refresh endpoint
         const res = await axios.post(
-          'http://localhost:5000/api/auth/refresh',
+          'https://backend-nu-ruddy-13.vercel.app/api/auth/refresh',
           {},
           { withCredentials: true }
         );
