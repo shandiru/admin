@@ -13,6 +13,7 @@ export const useAuth = () => {
       await axiosInstance.post('/auth/logout');
     } catch (e) {
       // Even if API fails, clear local state
+      alert('Logout failed on server, but you have been logged out locally. Please try again if you experience issues.');
     }
     dispatch(logout());
     window.location.href = '/login';
