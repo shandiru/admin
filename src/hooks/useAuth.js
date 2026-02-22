@@ -9,6 +9,7 @@ export const useAuth = () => {
   const isAuthenticated = !!accessToken;
 
   const handleLogout = async () => {
+    alert('You will be logged out. Please confirm.');
     try {
       await axiosInstance.post('/auth/logout');
     } catch (e) {
